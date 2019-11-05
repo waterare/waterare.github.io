@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://waterare.github.io/sitemap.xml
