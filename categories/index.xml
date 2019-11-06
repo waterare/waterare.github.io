@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Albert的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Jul 2018 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 05 Nov 2018 16:01:23 +0800</lastBuildDate>
     
 	<atom:link href="http://waterare.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>电子硬件</title>
+      <link>http://waterare.github.io/categories/%E7%94%B5%E5%AD%90%E7%A1%AC%E4%BB%B6/</link>
+      <pubDate>Mon, 05 Nov 2018 16:01:23 +0800</pubDate>
+      
+      <guid>http://waterare.github.io/categories/%E7%94%B5%E5%AD%90%E7%A1%AC%E4%BB%B6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Syntax Highlighting</title>
+      <link>http://waterare.github.io/categories/syntax-highlighting/</link>
+      <pubDate>Tue, 10 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://waterare.github.io/categories/syntax-highlighting/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Theme preview</title>
@@ -39,56 +57,20 @@
     </item>
     
     <item>
-      <title>ASCLL</title>
-      <link>http://waterare.github.io/categories/ascll/</link>
-      <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
-      
-      <guid>http://waterare.github.io/categories/ascll/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>English</title>
-      <link>http://waterare.github.io/categories/english/</link>
-      <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
-      
-      <guid>http://waterare.github.io/categories/english/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>日本語</title>
-      <link>http://waterare.github.io/categories/%E6%97%A5%E6%9C%AC%E8%AA%9E/</link>
-      <pubDate>Wed, 30 Aug 2017 01:53:34 +0800</pubDate>
-      
-      <guid>http://waterare.github.io/categories/%E6%97%A5%E6%9C%AC%E8%AA%9E/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>中文</title>
-      <link>http://waterare.github.io/categories/%E4%B8%AD%E6%96%87/</link>
-      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
-      
-      <guid>http://waterare.github.io/categories/%E4%B8%AD%E6%96%87/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>shortcodes</title>
       <link>http://waterare.github.io/categories/shortcodes/</link>
-      <pubDate>Tue, 30 Aug 2016 16:01:23 +0800</pubDate>
+      <pubDate>Tue, 10 Jul 2018 00:00:00 +0800</pubDate>
       
       <guid>http://waterare.github.io/categories/shortcodes/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Syntax Highlighting</title>
-      <link>http://waterare.github.io/categories/syntax-highlighting/</link>
-      <pubDate>Tue, 30 Aug 2011 16:01:23 +0800</pubDate>
+      <title>TOOL</title>
+      <link>http://waterare.github.io/categories/tool/</link>
+      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
       
-      <guid>http://waterare.github.io/categories/syntax-highlighting/</guid>
+      <guid>http://waterare.github.io/categories/tool/</guid>
       <description></description>
     </item>
     

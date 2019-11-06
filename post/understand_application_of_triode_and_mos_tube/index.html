@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Understand application of triode and MOS tube - Albert的博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Albert" /><meta name="description" content="1、Switching troide 三级管npn和pnp当开关使用，工作于截止区和饱和区(相当于电路的切断和导通)。 NPN三极管做开关管时，当基极Vin" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.6 with theme even" />
+
+
+<link rel="canonical" href="http://waterare.github.io/post/understand_application_of_triode_and_mos_tube/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Understand application of triode and MOS tube" />
+<meta property="og:description" content="1、Switching troide 三级管npn和pnp当开关使用，工作于截止区和饱和区(相当于电路的切断和导通)。 NPN三极管做开关管时，当基极Vin" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://waterare.github.io/post/understand_application_of_triode_and_mos_tube/" />
+<meta property="article:published_time" content="2018-11-05T16:01:23&#43;08:00"/>
+<meta property="article:modified_time" content="2018-11-05T16:01:23&#43;08:00"/>
+
+<meta itemprop="name" content="Understand application of triode and MOS tube">
+<meta itemprop="description" content="1、Switching troide 三级管npn和pnp当开关使用，工作于截止区和饱和区(相当于电路的切断和导通)。 NPN三极管做开关管时，当基极Vin">
+
+
+<meta itemprop="datePublished" content="2018-11-05T16:01:23&#43;08:00" />
+<meta itemprop="dateModified" content="2018-11-05T16:01:23&#43;08:00" />
+<meta itemprop="wordCount" content="2211">
+
+
+
+<meta itemprop="keywords" content="三极管,mos管,硬件," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Understand application of triode and MOS tube"/>
+<meta name="twitter:description" content="1、Switching troide 三级管npn和pnp当开关使用，工作于截止区和饱和区(相当于电路的切断和导通)。 NPN三极管做开关管时，当基极Vin"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Albert的博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Albert的博客</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Understand application of triode and MOS tube</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-11-05 </span>
+        <div class="post-category">
+            <a href="/categories/%E7%94%B5%E5%AD%90%E7%A1%AC%E4%BB%B6/"> 电子硬件 </a>
+            </div>
+          <span class="more-meta"> 2211 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#1-switching-troide-br">1、Switching troide</br></a></li>
+<li><a href="#2-mos-tube-on-and-off-br">2、MOS tube on and off</br></a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<hr />
+
+<h2 id="1-switching-troide-br">1、Switching troide</br></h2>
+
+<p>三级管npn和pnp当开关使用，工作于截止区和饱和区(相当于电路的切断和导通)。</p>
+
+<ul>
+<li>NPN三极管做开关管时，当基极Vin为低电压时，由于基级没有电流，因此集电极亦无电流，致连接于集电极的负载也没有电流，而相当于开关开启(关闭状态)，此时三极管工作于截止(cut off)区。</li>
+<li>同理NPN三极管当基极Vin为高电压时，由于基级有电流流动，因此使集电极流过更大的电流，因此负载回路被导通，而相当于开关闭合(连接状态)此时三极管工作于饱和(saturation)区。</li>
+</ul>
+
+<p><center><img height ='280' src ="https://i.loli.net/2019/11/07/ZvcXzSMg3ChwRda.png"/></center>
+<center>picture.1_NPN_troide_when_switching_using_instance</center>
+如图1中所示，当LED_DPI为高电平时，三极管集电极和发射极导通，LED_DPI_TC由于三极管导通使之接地。</p>
+
+<p><center><img height ='400' src ="https://i.loli.net/2019/11/07/P5mIJY9d7CjnG3v.png"/></center>
+<center>picture.2_A_switch_tube_in_the_form_of_two_triodes</center>
+两个三极管组合起来这种方式也可以形成开关管，这种连接方式也称为达林顿管，这两个三极管串连组成的一只等效的新三极管，其放大倍数是原来的两只三极管之积，它可以放大非常微小的信号。它同时也可以做开关管，其通断情况于一只三极管通断情况相同。</p>
+
+<ul>
+<li><p>达林顿管就是两只三极管适当的连接起来，组成一个等效三极管(通断以第一个三极管为准)，电流放大倍数是二者之积，常用于功率放大和稳压电路中。</p></li>
+
+<li><p>达林顿管电路有几种接法：NPN+NPN,PNP+PNP,NPN+PNP,PNP+NPN,它们的通断情况都是以第一只的为准。</p></li>
+</ul>
+
+<p>以上都是相关与NPN三极管当开关管的情况。PNP和NPN两种三极管做开关，原理类似，但所需逻辑电平刚好相反。</p>
+
+<p><center><img  height ='300' src ="https://i.loli.net/2019/11/07/tF2Nehn7lLJaoAc.png"/></center>
+<center>picture.3_NPN_triode_when_switch_using_circuit_diagram</center>
+图3中当基极为低电平时，三极管导通，如果为高电平，三极管截止。</p>
+
+<p><strong>总结：</strong></p>
+
+<p>三极管当开关管情况下，NPN三极管如果要导通，要输入高电平，如果输入低电平，三极管截止。PNP三极管如果要导通，要输入低电平，如果输入高电平，三极管截止。</p>
+
+<p><strong>三极管当做开关时技巧：</strong></p>
+
+<p><font color=#DC143C>三极管上箭头(发射极)所在的方向的二极管只需要二极管正向导通，那么三极管上下就能导通。三极管作开关时不涉及任何所谓公式，放大倍数。</font></p>
+
+<p>三极管有以下特性：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">IE=IB+IC
+IC=β*IB(其中β≈10~400)
+如果IB=0，那么IE=IC=0</pre></td></tr></table>
+</div>
+</div>
+<p>工作在放大区时微弱变化的电信号通过三极管放大成波幅很大的电信号。<code>IC=β*IB(其中β≈10~400)</code></p>
+
+<p><center><img  height ='300' src ="https://i.loli.net/2019/11/07/v5CuQBpm3aiN9SH.png"/></center>
+<center>picture.4_Triode_amplifies_the_cirtut</center>
+图4中此电路放大到一定状态到饱和状态时也是一个开关管。</p>
+
+<p>三极管多个组合起来可以做到控制电机正反转电路：</p>
+
+<p><center><img  height ='350' src ="https://i.loli.net/2019/11/07/xgny8QcRGhWMjwe.png"/></center>
+<center>picture.5_control_motor_reverse_circut</center>
+图5电路可以控制相对于功率小的电机正转或者反转，当R1端输入高电平电机正转，R2端输入高电平电机反转。具体原理就不在这里赘述。</p>
+
+<hr />
+
+<h2 id="2-mos-tube-on-and-off-br">2、MOS tube on and off</br></h2>
+
+<p>关于mos管和三极管的封装</p>
+
+<p><center><img height ='70' src ="https://i.loli.net/2019/11/07/xWVUsTygE4mcwI3.png"/></center>
+<center>picture.6_picture6_mos_tube_footprint</center>
+- 三极管：1B,2E,3C
+- Mos管：1G,2S,3D</p>
+
+<p><center><img  height ='150' src ="https://i.loli.net/2019/11/07/N82HLQzAFvPgbIl.png"/></center>
+<center>picture.7_schematic_diagram</center>
+<font color=#DC143C>图7中，Q1表示N沟道，Q2表示P沟道。（判断方法，在G栅极记住为沟道，箭头表示PN结，在沟道位置对应是什么结就表示什么沟道）</font></p>
+
+<p>箭头指向G极的就是N沟道，箭头背向G极的是P沟道，它们两个寄生的二极管均于箭头方向一致。</p>
+
+<p><center><img  height ='150' src ="https://i.loli.net/2019/11/07/Wlwi17PzQHFUJVs.png"/></center>
+<center>picture.8_Direction_of_current_when_conducting</center>
+- Nmos：（G极高电平，比S极高3V）D极接输入,S极输出；
+- Pmos：（G极低电平，比S极底3V）D极接输出,S极输入；
+- Nmos导通时：Ug&gt;Us,Ugs&gt;Ugs(th)
+- Pmos导通时：Ug&lt;Us,Ugs&lt;Ugs(th)
+- Nmos在栅极为高电平时候导通，低电平时候关闭截止。
+- Pmos在栅极为底电平时候导通，高电平时候关闭截止。</p>
+
+<p>N沟道管子加正向电压即导通沟道加反向电压，一般2V-4V。(即图中PN结反向时,且PN结压降有达到要求，即可导通)以上都针对增强型mos管，耗尽型一般不常用。场效应管的作用有信号转换和控制电路通和断的作用。</p>
+
+<p><strong>Mos管通断判断速记：</strong></p>
+
+<ul>
+<li><p><font color="#DC143C">MOS管导通条件，只要记住电压方向与中间箭头方向相反即为导通(当然，这个相反的电压需要达到MOS管开启电压)</font></p></li>
+
+<li><p><font color="#DC143C">导通时候，都是电流方向和箭头PN结相反的流动方向。(可以理解为G极和S极压差，使得PN结被击穿，让电流反过PN结流动，导通后电路方向和其二极管方向相反)</font></p></li>
+</ul>
+
+<p>例如：导通电压为3V的N沟道MOS管，只要G的电压比S极电压高3V即可导通(导通过程D的电压比S要高)，同理导通电压为3V的P型mos管，只要G电压比S极电压低3V即可导通(导通过程S极电压比D极高)。</p>
+
+<p>Mos管做开关典型应用：</p>
+
+<p><center><img  height ='350' src ="https://i.loli.net/2019/11/07/Jk8qFfhaD4HIzXb.png"/></center>
+<center>picture.9_N_channel_mos_tube_as_a_typical_switch_application</center>
+P沟道的电路：P沟道的mos控制管控制GPS模块电源通和断，芯片电压控制引脚为低电平时导通，GPS模块正常供电。</p>
+
+<p><center><img  height ='250' src ="https://i.loli.net/2019/11/07/ldDygeJrQ2IWHZO.png"/></center>
+<center>picture.10_P_channel_mos_tube_as_a_typical_switch_application</center>
+电源开关电路，尤其是mos管的电源开关电路，常用于各个“功能模块”电路的电源通断控制。(如上述的P型mos管电路)。图中为P型mos管做电源开关电路时模型和控制方式。</p>
+
+<p><center><img  height ='250' src ="https://i.loli.net/2019/11/07/DL9PCJbHckUGzVM.png"/></center>
+<center>picture.11_MOS_tube_switch_circut_diagram</center>
+设计软启动，软启动是指电源缓慢开启，以限制电源启动时的浪涌电流。(浪涌电流可令电源系统不堪重负而掉电，导致系统不稳定，严重会损坏电路上的元器件)电压示意如图所示：</p>
+
+<p><center><img  height ='120' src ="https://i.loli.net/2019/11/07/IwL97FRWYd8xfjK.png"/></center>
+<center>picture.12_Soft_start_diagram</center>
+用mos管实现电源开关电路，并且带软开启功能如下，在设计中，只需要添加一个电容C1和电阻R2就可以实现软启动(soft start)功能。</p>
+
+<p><center><img  height ='320' src ="https://i.loli.net/2019/11/07/DUbwMFqo5KRVshu.png"/></center>
+<center>picture.13_Soft_start_schematic</center>
+<strong>分析：</strong></p>
+
+<p>控制电源信号control为低或者高阻状态时，二极管Q2拉低到地，Q2不导通，+5v_out就没有输出，电阻R4是为了在control为高阻状态时，将三极管基极固定在低电平，不让其浮空。</p>
+
+<p>控制信号为高电平时，三极管Q2饱和导通，进而C1通过电阻R2充电，即C1与G极相连电压5V缓慢下降到0V，导致Vgs电压逐渐增大。</p>
+
+<p>Mos管Q1的Vgs缓慢增大。令其缓慢打开，到完全打开，最终Vgs=-5V时，利用C1电容充电时间实现Q1缓慢打开，实现软启动。</p>
+
+<hr />
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Albert</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2018-11-05
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E4%B8%89%E6%9E%81%E7%AE%A1/">三极管</a>
+          <a href="/tags/mos%E7%AE%A1/">mos管</a>
+          <a href="/tags/%E7%A1%AC%E4%BB%B6/">硬件</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/even-preview/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Theme preview</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/js-flowchart-diagrams/">
+            <span class="next-text nav-default">JS Flowchart Diagrams</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: '03BpNWLjnTQLWC5C71ihhlk3-gzGzoHsz',
+        appKey: '5hJKjNWFiTOUUmM1fPpTwSDg',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="1035742117@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://waterare.github.io" class="iconfont icon-github" title="github"></a>
+      <a href="https://space.bilibili.com/110512211?share_medium=android&amp;share_source=copy_link&amp;bbid=NgI6DWhYbA9rCm9fI18jinfoc&amp;ts=1572966399315" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://waterare.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Albert</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

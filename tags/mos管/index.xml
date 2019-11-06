@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mos管 on Albert的博客</title>
+    <link>http://waterare.github.io/tags/mos%E7%AE%A1/</link>
+    <description>Recent content in mos管 on Albert的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 05 Nov 2018 16:01:23 +0800</lastBuildDate>
+    
+	<atom:link href="http://waterare.github.io/tags/mos%E7%AE%A1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Understand application of triode and MOS tube</title>
+      <link>http://waterare.github.io/post/understand_application_of_triode_and_mos_tube/</link>
+      <pubDate>Mon, 05 Nov 2018 16:01:23 +0800</pubDate>
+      
+      <guid>http://waterare.github.io/post/understand_application_of_triode_and_mos_tube/</guid>
+      <description>1、Switching troide 三级管npn和pnp当开关使用，工作于截止区和饱和区(相当于电路的切断和导通)。 NPN三极管做开关管时，当基极Vin</description>
+    </item>
+    
+  </channel>
+</rss>
